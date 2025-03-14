@@ -1,58 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>meucontador</title>
+<head>
+    <title>meucontador</title>
     <style>
-        *{
-        margin: 0;
-        box-sizing: border-box;
+        * {
+            margin: 0;
+            box-sizing: border-box;
         }
-    body{
-        height: 100vh;
-        background-color: black;
-        color: white;
-        display: grid;
-        place-items: center;
-    }
-    div{
-        background: rgba(255, 255, 255, 0.2);
-        padding: 20px;
-        border-radius: 5px;
-        text-align: center;
-    }
-    p{
-        font-size: 100px;
-    }
+
+        body {
+            height: 100vh;
+            background-color: black;
+            color: white;
+            display: grid;
+            place-items: center;
+        }
+
+        div {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 100px;
+        }
     </style>
-    </head>
-    <body>
-        <div>
-<h1>Contador</h1>
-<p> id="resultado"</p>
-<button> onclick="aumentar()">mais</button>
-<button> onclick="diminuir()">menos</button>
-</div>
-<script>
+</head>
+<body>
+    <div>
+        <h1>Contador</h1>
+        <p id="resultado">0</p>
+        <button onclick="aumentar()">mais</button>
+        <button onclick="diminuir()">menos</button>
+    </div>
+    <script>
+        // estado da minha aplicacao
+        let numero = 0;
 
-    //estado da minha aplicacao
-    let numero = 0
+        // ateradores de estado da aplicacao
+        function aumentar() {
+            numero++;
+            mostrarNaTela();
+        }
 
-    //ateradores de estado da aplicacao
-function aumentar(){
-    numero++
-    mostrarNaTela()
+        function diminuir() {
+            numero--;
+            mostrarNaTela();
+        }
 
-}
-function diminuir(){
-    numero--
-    mostrarNaTela()
-    
-}
-//jogar o estado da aplicacao na tela
-function mostrarNaTela(){
-    const p = document.querySelector("#resultado")
-    0.innerText= numero
-}
-</script>
-    </body>
+        // jogar o estado da aplicacao na tela
+        function mostrarNaTela() {
+            const p = document.querySelector("#resultado");
+            p.innerText = numero;
+        }
+    </script>
+</body>
 </html>
