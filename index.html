@@ -1,69 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>meucontador</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
     <style>
-        * {
+        *{
             margin: 0;
             box-sizing: border-box;
         }
-
-        body {
-            height: 100vh;
-            background-color: dark-pink;
-            color: white;
-            display: grid;
-            place-items: center;
+        body{
+            
         }
 
-        div {
-            background: rgba(255, 182, 193, 1);
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-        }
-
-        p {
-            font-size: 100px;
-        }
-
-        button { 
-            background-color: pink; 
-            color: white; 
-            border: 1px solid white; 
-            padding: 10px 20px; 
-            margin: 5px; 
-            cursor: pointer; 
-        }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Contador</h1>
-        <p id="resultado">0</p>
-        <button onclick="aumentar()">mais</button>
-        <button onclick="diminuir()">menos</button>
-    </div>
-    <script>
-        // estado da minha aplicacao
-        let numero = 0;
-
-        // ateradores de estado da aplicacao
-        function aumentar() {
-            numero++;
-            mostrarNaTela();
-        }
-
-        function diminuir() {
-            numero--;
-            mostrarNaTela();
-        }
-
-        // jogar o estado da aplicacao na tela
-        function mostrarNaTela() {
-            const p = document.querySelector("#resultado");
-            p.innerText = numero;
-        }
-    </script>
+    <section>
+    <button>on/ac</button>
+    <button>M+</button>
+    <button>M-</button>
+    <button>MRC</button>
+    <button>GT</button>
+    <button>OFF</button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button>÷</button>
+    <button>🡆</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button>x</button>
+    <button>%</button>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>-</button>
+    <button>MU</button>
+    <button>0</button>
+    <button>00</button>
+    <button>.</button>
+    <button>+</button>
+    <button>=</button>
+</section>
+    
 </body>
+
 </html>
