@@ -4,48 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>contador</title>
     <style>
-        *{
+        * {
             margin: 0;
             box-sizing: border-box;
         }
-        body{
-            
+
+        body {
+            display: grid;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: black;
+            color: rgb(53, 56, 58);
         }
 
+        section {
+            background-color: blueviolet;
+            padding: 40px;
+            border-radius: 10px;
+
+        }
+
+        p {
+            font-size: 7rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+
+        }
+
+        button {
+            background-color: rgb(97, 41, 150);
+            border-radius: 5px;
+            padding: 1px 20px;
+            font-size: 18px;
+            margin: 4px;
+            border: none;
+        }
+
+        button:hover {
+            background-color: rgb(129, 57, 196);
+        }
     </style>
 </head>
+
 <body>
     <section>
-    <button>on/ac</button>
-    <button>M+</button>
-    <button>M-</button>
-    <button>MRC</button>
-    <button>GT</button>
-    <button>OFF</button>
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
-    <button>÷</button>
-    <button>🡆</button>
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-    <button>x</button>
-    <button>%</button>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>-</button>
-    <button>MU</button>
-    <button>0</button>
-    <button>00</button>
-    <button>.</button>
-    <button>+</button>
-    <button>=</button>
-</section>
-    
+        <h1>Contador</h1>
+        <p>0</p>
+        <button onclick="add()">+1</button>
+        <button onclick="sub()">-1</button>
+    </section>
+
+    <script>
+        let numero = 0
+
+        function add() {
+            numero++
+            render()
+        }
+        function sub() {
+            numero--
+            render()
+        }
+        function render() {
+            const p = document.querySelector('p')
+            p.innerText = numero         
+        }
+    </script>
 </body>
 
 </html>
